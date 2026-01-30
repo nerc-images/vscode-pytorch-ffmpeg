@@ -7,6 +7,7 @@ RUN dnf install -y cuda-toolkit-12-8
 RUN dnf --enablerepo=codeready-builder-for-rhel-9-x86_64-rpms install -y ffmpeg-free-devel ffmpeg-free
 RUN pip install flash-attention --no-build-isolation
 RUN pip install torch \
+  torchvision \
   bash_kernel
 RUN python -m bash_kernel.install
 
